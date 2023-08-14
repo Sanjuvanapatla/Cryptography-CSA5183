@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+
+typedef uint32_t u32;
+
+
+void BlowfishEncrypt(u32 *left, u32 *right, const u32 *pKeys) {
+    // Encryption logic
+    // ...
+}
+
+void BlowfishDecrypt(u32 *left, u32 *right, const u32 *pKeys) {
+    
+}
+
+int main() {
+    u32 pKeys[18]; 
+
+    u32 left = 0x12345678;  
+    u32 right = 0xabcdef01;
+
+    // Encrypt
+    BlowfishEncrypt(&left, &right, pKeys);
+    printf("Encrypted: L=0x%08X R=0x%08X\n", left, right);
+
+    // Decrypt
+    BlowfishDecrypt(&left, &right, pKeys);
+    printf("Decrypted: L=0x%08X R=0x%08X\n", left, right);
+
+    return 0;
+}
